@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="550.0" prefWidth="480.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" maxWidth="380.0" spacing="18.0" style="-fx-background-color: #ffffff; -fx-background-radius: 12; -fx-border-color: #e0e0e0; -fx-border-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 12, 0, 0, 4);">
+         <children>
+            <!-- Cabecera / Logo -->
+            <VBox alignment="CENTER" spacing="6.0">
+               <children>
+                  <Label text="🌱 SEMILLAIX" textFill="#2e7d32">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Gestión de Semillero y Vivero" textFill="#5f6368">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Inicia sesión para continuar" textFill="#80868b">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            
+            <!-- Campo Email -->
+            <VBox spacing="6.0">
+               <children>
+                  <Label text="Correo electrónico:" textFill="#333333">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" prefHeight="40.0" promptText="ejemplo@semillaix.com" style="-fx-background-radius: 6; -fx-border-color: #ced4da; -fx-border-radius: 6;" />
+               </children>
+            </VBox>
+            
+            <!-- Campo Contraseña -->
+            <VBox spacing="6.0">
+               <children>
+                  <Label text="Contraseña:" textFill="#333333">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword" prefHeight="40.0" promptText="••••••••" style="-fx-background-radius: 6; -fx-border-color: #ced4da; -fx-border-radius: 6;" />
+               </children>
+            </VBox>
+            
+            <!-- Mensaje de Error / Feedback -->
+            <Label fx:id="lblError" text="" textFill="#d32f2f" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            
+            <!-- Botón Ingresar -->
+            <Button fx:id="btnLogin" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="42.0" style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-cursor: hand;" text="Iniciar Sesión">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            
+            <!-- Pie de tarjeta -->
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Autenticación segura vía JWT" textFill="#9aa0a6">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="32.0" left="28.0" right="28.0" top="32.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

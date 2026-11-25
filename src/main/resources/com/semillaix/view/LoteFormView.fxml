@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="420.0" spacing="16.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <!-- Cabecera -->
+      <VBox spacing="4.0">
+         <children>
+            <Label fx:id="lblTituloLote" text="Registrar Nuevo Lote" textFill="#2e7d32">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProductorAsignado" text="Productor: Juan Pérez" textFill="#6c757d">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      
+      <!-- Campo Tipo de semilla o planta -->
+      <VBox spacing="6.0">
+         <children>
+            <Label text="Tipo de semilla / planta: *" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTipo" prefHeight="38.0" promptText="Ej: Tomate Platense, Albahaca Hoja Ancha..." style="-fx-background-radius: 6; -fx-border-color: #ced4da; -fx-border-radius: 6;" />
+         </children>
+      </VBox>
+      
+      <!-- Campo Cantidad -->
+      <VBox spacing="6.0">
+         <children>
+            <Label text="Cantidad: *" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCantidad" prefHeight="38.0" promptText="Ej: 50 (unidades, plantines o gramos)" style="-fx-background-radius: 6; -fx-border-color: #ced4da; -fx-border-radius: 6;" />
+         </children>
+      </VBox>
+      
+      <!-- Campo Fecha -->
+      <VBox spacing="6.0">
+         <children>
+            <Label text="Fecha de registro: *" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpFecha" maxWidth="1.7976931348623157E308" prefHeight="38.0" promptText="Seleccione fecha..." style="-fx-background-radius: 6;" />
+         </children>
+      </VBox>
+      
+      <!-- Mensaje de Error / Feedback -->
+      <Label fx:id="lblError" text="" textFill="#d32f2f" wrapText="true">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      
+      <!-- Botones de Acción -->
+      <HBox alignment="CENTER_RIGHT" spacing="12.0">
+         <children>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="38.0" prefWidth="100.0" style="-fx-background-radius: 6; -fx-cursor: hand;" text="Cancelar" />
+            <Button fx:id="btnGuardarLote" mnemonicParsing="false" prefHeight="38.0" prefWidth="130.0" style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-cursor: hand;" text="Guardar Lote" />
+         </children>
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

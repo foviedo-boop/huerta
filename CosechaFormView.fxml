@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="400.0" spacing="14.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <!-- Cabecera -->
+      <VBox spacing="4.0">
+         <children>
+            <Label text="Registrar cosecha">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLoteCargado" text="Lote ya cargado: Cantero A" textFill="#6c757d">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      
+      <!-- Campo Cantidad -->
+      <VBox spacing="6.0">
+         <children>
+            <Label text="Cantidad (kg):" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCantidad" prefHeight="35.0" promptText="2.5" />
+         </children>
+      </VBox>
+      
+      <!-- Campo Destino -->
+      <VBox spacing="6.0">
+         <children>
+            <Label text="Destino:" textFill="#333333">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbDestino" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="banco de semillas" />
+         </children>
+      </VBox>
+      
+      <!-- Botones Guardar / Cancelar -->
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Cancelar" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #388e3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Guardar" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
